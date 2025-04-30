@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        (unknown)
-// source: pet.proto
+// source: pet/v1/pet.proto
 
 package petv1
 
@@ -30,7 +30,7 @@ type PutPetRequest struct {
 
 func (x *PutPetRequest) Reset() {
 	*x = PutPetRequest{}
-	mi := &file_pet_proto_msgTypes[0]
+	mi := &file_pet_v1_pet_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *PutPetRequest) String() string {
 func (*PutPetRequest) ProtoMessage() {}
 
 func (x *PutPetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pet_proto_msgTypes[0]
+	mi := &file_pet_v1_pet_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *PutPetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PutPetRequest.ProtoReflect.Descriptor instead.
 func (*PutPetRequest) Descriptor() ([]byte, []int) {
-	return file_pet_proto_rawDescGZIP(), []int{0}
+	return file_pet_v1_pet_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *PutPetRequest) GetPetId() string {
@@ -75,7 +75,7 @@ type PutPetResponse struct {
 
 func (x *PutPetResponse) Reset() {
 	*x = PutPetResponse{}
-	mi := &file_pet_proto_msgTypes[1]
+	mi := &file_pet_v1_pet_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -87,7 +87,7 @@ func (x *PutPetResponse) String() string {
 func (*PutPetResponse) ProtoMessage() {}
 
 func (x *PutPetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pet_proto_msgTypes[1]
+	mi := &file_pet_v1_pet_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -100,7 +100,7 @@ func (x *PutPetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PutPetResponse.ProtoReflect.Descriptor instead.
 func (*PutPetResponse) Descriptor() ([]byte, []int) {
-	return file_pet_proto_rawDescGZIP(), []int{1}
+	return file_pet_v1_pet_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PutPetResponse) GetMessage() string {
@@ -117,39 +117,39 @@ func (x *PutPetResponse) GetSuccess() bool {
 	return false
 }
 
-var File_pet_proto protoreflect.FileDescriptor
+var File_pet_v1_pet_proto protoreflect.FileDescriptor
 
-const file_pet_proto_rawDesc = "" +
+const file_pet_v1_pet_proto_rawDesc = "" +
 	"\n" +
-	"\tpet.proto\x12\x06pet.v1\"&\n" +
+	"\x10pet/v1/pet.proto\x12\x06pet.v1\"&\n" +
 	"\rPutPetRequest\x12\x15\n" +
 	"\x06pet_id\x18\x01 \x01(\tR\x05petId\"D\n" +
 	"\x0ePutPetResponse\x12\x18\n" +
 	"\amessage\x18\x01 \x01(\tR\amessage\x12\x18\n" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess2L\n" +
 	"\x0fPetStoreService\x129\n" +
-	"\x06PutPet\x12\x15.pet.v1.PutPetRequest\x1a\x16.pet.v1.PutPetResponse\"\x00Bb\n" +
+	"\x06PutPet\x12\x15.pet.v1.PutPetRequest\x1a\x16.pet.v1.PutPetResponse\"\x00Bh\n" +
 	"\n" +
-	"com.pet.v1B\bPetProtoP\x01Z\x11bufdemo/gen;petv1\xa2\x02\x03PXX\xaa\x02\x06Pet.V1\xca\x02\x06Pet\\V1\xe2\x02\x12Pet\\V1\\GPBMetadata\xea\x02\aPet::V1b\x06proto3"
+	"com.pet.v1B\bPetProtoP\x01Z\x17bufdemo/pb/pet/v1;petv1\xa2\x02\x03PXX\xaa\x02\x06Pet.V1\xca\x02\x06Pet\\V1\xe2\x02\x12Pet\\V1\\GPBMetadata\xea\x02\aPet::V1b\x06proto3"
 
 var (
-	file_pet_proto_rawDescOnce sync.Once
-	file_pet_proto_rawDescData []byte
+	file_pet_v1_pet_proto_rawDescOnce sync.Once
+	file_pet_v1_pet_proto_rawDescData []byte
 )
 
-func file_pet_proto_rawDescGZIP() []byte {
-	file_pet_proto_rawDescOnce.Do(func() {
-		file_pet_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pet_proto_rawDesc), len(file_pet_proto_rawDesc)))
+func file_pet_v1_pet_proto_rawDescGZIP() []byte {
+	file_pet_v1_pet_proto_rawDescOnce.Do(func() {
+		file_pet_v1_pet_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pet_v1_pet_proto_rawDesc), len(file_pet_v1_pet_proto_rawDesc)))
 	})
-	return file_pet_proto_rawDescData
+	return file_pet_v1_pet_proto_rawDescData
 }
 
-var file_pet_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_pet_proto_goTypes = []any{
+var file_pet_v1_pet_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_pet_v1_pet_proto_goTypes = []any{
 	(*PutPetRequest)(nil),  // 0: pet.v1.PutPetRequest
 	(*PutPetResponse)(nil), // 1: pet.v1.PutPetResponse
 }
-var file_pet_proto_depIdxs = []int32{
+var file_pet_v1_pet_proto_depIdxs = []int32{
 	0, // 0: pet.v1.PetStoreService.PutPet:input_type -> pet.v1.PutPetRequest
 	1, // 1: pet.v1.PetStoreService.PutPet:output_type -> pet.v1.PutPetResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -159,26 +159,26 @@ var file_pet_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_pet_proto_init() }
-func file_pet_proto_init() {
-	if File_pet_proto != nil {
+func init() { file_pet_v1_pet_proto_init() }
+func file_pet_v1_pet_proto_init() {
+	if File_pet_v1_pet_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pet_proto_rawDesc), len(file_pet_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pet_v1_pet_proto_rawDesc), len(file_pet_v1_pet_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pet_proto_goTypes,
-		DependencyIndexes: file_pet_proto_depIdxs,
-		MessageInfos:      file_pet_proto_msgTypes,
+		GoTypes:           file_pet_v1_pet_proto_goTypes,
+		DependencyIndexes: file_pet_v1_pet_proto_depIdxs,
+		MessageInfos:      file_pet_v1_pet_proto_msgTypes,
 	}.Build()
-	File_pet_proto = out.File
-	file_pet_proto_goTypes = nil
-	file_pet_proto_depIdxs = nil
+	File_pet_v1_pet_proto = out.File
+	file_pet_v1_pet_proto_goTypes = nil
+	file_pet_v1_pet_proto_depIdxs = nil
 }

@@ -4,13 +4,13 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: bufdemo/gen
+      value: bufdemo/pb
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.36.6
-    out: gen
+    out: pb
     opt: paths=source_relative
   - remote: buf.build/connectrpc/go
-    out: gen
+    out: pb
     opt: paths=source_relative
 inputs:
   - directory: proto

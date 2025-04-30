@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package pet.v1;
 
+option go_package = "bufdemo/pb/pet/v1;petv1";
+
 message PutPetRequest {
     string pet_id = 1;
 }

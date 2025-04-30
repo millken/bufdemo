@@ -1,8 +1,8 @@
 package main
 
 import (
-	petv1 "bufdemo/gen"
-	"bufdemo/gen/petv1connect"
+	petv1 "bufdemo/pb/pet/v1"
+	"bufdemo/pb/pet/v1/petv1connect"
 	"context"
 	"fmt"
 	"log"
