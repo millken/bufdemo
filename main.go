@@ -17,7 +17,10 @@ const address = "localhost:8080"
 
 func main() {
 	mux := http.NewServeMux()
-	path, handler := petv1connect.NewPetStoreServiceHandler(&petStoreServiceServer{})
+	path, handler := petv1connect.NewPetStoreServiceHandler(
+		&petStoreServiceServer{},
+		connect.WithCodec(vtprotoCodec{}),
+	)
 	mux.Handle(path, handler)
 	fmt.Println("... Listening on", address)
 	err := http.ListenAndServe(

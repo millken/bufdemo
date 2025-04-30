@@ -9,6 +9,10 @@ plugins:
   - remote: buf.build/protocolbuffers/go:v1.36.6
     out: pb
     opt: paths=source_relative
+  - remote: buf.build/community/planetscale-vtprotobuf:v0.6.0
+    out: pb
+    opt:
+      - paths=source_relative,features=marshal+unmarshal+size+pool
   - remote: buf.build/connectrpc/go
     out: pb
     opt: paths=source_relative
