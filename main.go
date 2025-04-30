@@ -40,9 +40,12 @@ type petStoreServiceServer struct {
 // PutPet adds the pet associated with the given request into the PetStore.
 func (s *petStoreServiceServer) PutPet(
 	ctx context.Context,
-	req *connect.Request[petv1.DeletePetRequest],
-) (*connect.Response[petv1.DeletePetResponse], error) {
+	req *connect.Request[petv1.PutPetRequest],
+) (*connect.Response[petv1.PutPetResponse], error) {
 	name := req.Msg.GetPetId()
 	log.Printf("Got a request to create ID %s", name)
-	return connect.NewResponse(&petv1.DeletePetResponse{}), nil
+	return connect.NewResponse(&petv1.PutPetResponse{
+		Success: name != "",
+		Message: fmt.Sprintf("Created pet with ID %s", name),
+	}), nil
 }
